@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "AddUser";
+}
+
+@model Demoapp.Models.UsersModel
+
+<h2>AddUser</h2>
+
+<form action="AddUser/Users" method="post">
+
+   User Name: @Html.TextBoxFor(model=>model.UserName)
+    Age: @Html.TextBoxFor(model => model.Age)
+    
+    <input type="submit" value="Add User"/>
+</form>
+

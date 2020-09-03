@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "EditUser";
+}
+@model User
+<h2>EditUser</h2>
+
+
+<form action="EditUser/Users" method="post">
+    @Html.HiddenFor(model=>model.UserId)
+    User Name: @Html.TextBoxFor(model => model.Name)
+    Age: @Html.TextBoxFor(model => model.Age)
+    Vehicle: @Html.TextBoxFor(model=> model.Vehicle)
+
+    <input type="submit" value="Edit details" />
+</form>

@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "DisplayUser";
+}
+
+@model List<User>
+    <h2>Displaying Users</h2>
+
+<table border="1">
+    <tr>
+        <th>UserId</th>
+        <th>UserName</th>
+        <th>Age</th>
+        <th>VehicleOwned</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.UserId</td>
+            <td>@item.Name</td>
+            <td>@item.Age</td>
+            <td>@item.Vehicle</td>
+            <td>@Html.ActionLink("edit","EditUser","Users",new { personid = item.UserId},new { })</td>
+            <td>@Html.ActionLink("Delete", "DeleteUser", "Users", new { personid = item.UserId }, new { })</td>
+        </tr>
+    }
+</table>
+<h2>DisplayUser</h2>
+
